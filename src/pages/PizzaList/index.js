@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../../store/user/selectors";
 import { selectPizzas } from "../../store/pizzas/selectors";
 import { PizzaCard, AddPizzaForm } from "../../components";
+import "./styles.css";
 
 const PizzaList = () => {
   const user = useSelector(selectUser);
@@ -11,10 +12,10 @@ const PizzaList = () => {
     <div>
       <h1>Pizza Explorer</h1>
       <p>
-        Welcome back, <strong>{user.name}</strong>!
+        Welcome, <strong>{user.name}</strong>!
       </p>
       The number of pizzas is: <b>{pizzas.length}</b>
-      <ul>
+      <div className="pizzaList">
         {pizzas
           ? pizzas.map((pizza, i) => (
               <PizzaCard
@@ -22,10 +23,12 @@ const PizzaList = () => {
                 name={pizza.name}
                 description={pizza.description}
                 bought={pizza.bought}
+                image={pizza.image}
+                id={pizza.id}
               />
             ))
           : "loading..."}
-      </ul>
+      </div>
       <div>
         <AddPizzaForm />
       </div>

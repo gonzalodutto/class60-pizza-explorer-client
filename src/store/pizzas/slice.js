@@ -29,6 +29,33 @@ const initialState = {
       image:
         "https://img.static-rmg.be/a/food/image/q100/w480/h360/1087722/pizza-bianca-met-artisjok-en-mortadella.jpg",
     },
+    {
+      id: 161135,
+      name: "Pizza Margherita",
+      description:
+        "The typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt and extra-virgin olive oil.",
+      bought: 5,
+      image:
+        "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/216054.jpg",
+    },
+    {
+      id: 67273,
+      name: "Pizza Napoletana",
+      description:
+        "Neapolitan pizza also known as Naples-style pizza, is a style of pizza made with tomatoes and mozzarella cheese.",
+      bought: 2,
+      image:
+        "https://images.ctfassets.net/uexfe9h31g3m/6oBxgSjH9KoYuQqS2uO4Kc/a4b920125e77646ca7a573932a6301d6/GLUTEN-FREE-PIZZA.jpg?w=1200&h=600&fm=jpg&fit=thumb&q=90&fl=progressive",
+    },
+    {
+      id: 357321,
+      name: "Pizza Bianca",
+      description:
+        "White pizza, which omits tomato sauce from the equation, often substituting it with pesto or sour cream.",
+      bought: 10,
+      image:
+        "https://assets.biggreenegg.eu/app/uploads/2021/04/30120446/topimage-pizza-margherita-2021m05-800x533-1.jpg",
+    },
   ],
 };
 
