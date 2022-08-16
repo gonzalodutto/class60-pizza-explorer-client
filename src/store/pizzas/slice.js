@@ -36,14 +36,19 @@ export const pizzaSlice = createSlice({
   name: "pizzas",
   initialState,
   reducers: {
-    // Add a key called `deposit`
-    deposit: (state, action) => {
-      console.log("Hello from the reducer!");
-      state.amount = state.amount + action.payload;
+    addPizza: (state, action) => {
+      const { name, description } = action.payload;
+      const newPizza = {
+        id: Math.floor(Math.random() * 1000),
+        name,
+        description,
+        bought: 0,
+      };
+      state.allPizzas.push(newPizza);
     },
   },
 });
 
-export const {} = pizzaSlice.actions;
+export const { addPizza } = pizzaSlice.actions;
 
 export default pizzaSlice.reducer;

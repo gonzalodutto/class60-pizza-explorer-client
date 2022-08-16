@@ -1,13 +1,11 @@
 import { useSelector } from "react-redux";
 import { selectUser } from "../../store/user/selectors";
 import { selectPizzas } from "../../store/pizzas/selectors";
-import { PizzaCard } from "../PizzaCard";
+import { PizzaCard, AddPizzaForm } from "../../components";
 
 const PizzaList = () => {
   const user = useSelector(selectUser);
   const pizzas = useSelector(selectPizzas);
-
-  console.log(pizzas);
 
   return (
     <div>
@@ -24,11 +22,13 @@ const PizzaList = () => {
                 name={pizza.name}
                 description={pizza.description}
                 bought={pizza.bought}
-                // dateOfBirth={pizza.dateOfBirth}
               />
             ))
           : "loading..."}
       </ul>
+      <div>
+        <AddPizzaForm />
+      </div>
     </div>
   );
 };

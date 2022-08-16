@@ -1,2 +1,2 @@
-export * from "./PizzaList";
 export * from "./PizzaCard";
+export * from "./AddPizzaForm";

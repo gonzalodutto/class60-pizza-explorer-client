@@ -1,4 +1,4 @@
-import { PizzaList } from "./components";
+import { PizzaList } from "./pages";
 
 import "./App.css";
 
